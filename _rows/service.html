@@ -1,0 +1,21 @@
+--- 
+layout: default 
+row-priority: 4 
+section-id: service
+---
+
+<!-- Service Start -->
+<div class="section-title">
+  <h2>Our Services</h2>
+  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+</div>
+
+{% assign services = site.row-content | where:"row-content-type","service" | sort:"order" %}
+{% for service in services %}
+  <div class="col-sm-6 col-md-3">
+    <div class="service-item"> <i class="{{ service.class }}"></i>
+      <h4>{{ service.title }}</h4>
+      <p>{{ service.description }}</p>
+    </div>
+  </div>
+{% endfor %}

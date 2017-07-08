@@ -1,0 +1,38 @@
+---
+layout: default
+row-priority: 6
+section-id: testimonial
+---
+<!-- Content Start -->
+<div class="section-title text-center">
+  <h2>Fun Facts About Us</h2>
+  <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics</p>
+</div>
+<div class="col-md-6">
+  <div class="block">
+    <ul class="counter-box clearfix">
+      {% assign counters = site.row-content | where:"row-content-type","counter" | sort:"order" %}
+      {% for counter in counters %}
+	      <li>
+	        <div class="block"> <i class="{{ counter.class }}"></i>
+	          <h4 class="counter">{{ counter.total }}</h4> <span>{{ counter.title }}</span> </div>
+	      </li>
+	  {% endfor %}
+    </ul>
+  </div>
+</div>
+<div class="col-md-6">
+  <div class="testimonial-carousel">
+    <div id="testimonial-slider" class="owl-carousel">
+      {% assign testimonials = site.row-content | where:"row-content-type","testimonial" | sort:"order" %}
+      {% for testimonial in testimonials %}
+      <div> <img src="img/cotation.png" alt="IMG">
+        <p>{{ testimonial.content }}</p>
+        <div class="user"> <img src="img/item-img1.jpg" alt="Pepole">
+          <p><span>{{ testimonial.quoted-person }}</span> {{ testimonial.quoted-person-occupation }}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
