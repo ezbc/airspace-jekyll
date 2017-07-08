@@ -41,7 +41,7 @@ collections:
     output: true
   row-content:
     output: true
-  testimonials:
+  works:
     output: true
   headers:
     output: true
