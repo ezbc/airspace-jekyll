@@ -43,5 +43,7 @@ collections:
     output: true
   works:
     output: true
+  logos:
+    output: true
   headers:
     output: true
