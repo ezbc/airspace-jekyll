@@ -1,2 +1,8 @@
 source "https://rubygems.org"
 gemspec
+
+group :jekyll_plugins do
+  gem 'octopress-debugger'
+  gem 'octopress-paginate'
+  gem "jekyll-paginate"
+end

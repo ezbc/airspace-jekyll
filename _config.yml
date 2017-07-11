@@ -1,3 +1,7 @@
+gems:
+  - jekyll-paginate
+  - octopress-debugger
+  - octopress-paginate
 
 exclude:
   - "/vendor/"
@@ -12,11 +16,11 @@ keep_files:
   - ".git"
   - ".gitignore"
 
-
 # Site settings
 title: Airspace
 subtitle: "A free HTML5 agency template"
-url: "http://luminousrubyist.github.io" # the base hostname & protocol for your site
+permalink: pretty
+#url: "http://luminousrubyist.github.io" # the base hostname & protocol for your site
 # baseurl: "/the/subpath/of/your/site" # Set this value to "" if you want your site to be root
 baseurl: ""
 cover: "/assets/cover.png"
@@ -24,6 +28,9 @@ logo: "/assets/logo.png"
 
 # Build settings
 markdown: kramdown
+
+pagination:
+  per_page: 10
 
 # Google analytics
 # ga_tracking_id: "UA-XXXX-1"
